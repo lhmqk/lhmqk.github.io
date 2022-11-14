@@ -1,0 +1,86 @@
+@font-face {
+    font-family: RobotoReg;
+    src: url(./font/roboto/Roboto-Regular.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: RobotoReg;
+    src: url(./font/roboto/Roboto-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: RobotoBol;
+    src: url(./font/roboto/Roboto-Bold.ttf);
+    font-style: normal;
+}
+@font-face {
+    font-family: RobotoBol;
+    src: url(./font/roboto/Roboto-BoldItalic.ttf);
+    font-style: italic;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: RobotoReg;
+    font-size: 14px;
+    color: #F5F5F5;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+}
+main {
+    height: 100vh;
+}
+form {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+#igLink {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    --bs-btn-border-width: 2px;
+    --bs-btn-border-color: rgba(255, 255, 255, 0.2);
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-bg: rgba(255, 255, 255, 0.1);
+    --bs-btn-hover-bg: #025043;
+    --bs-btn-hover-border-color: rgba(255, 255, 255, 0.2);
+    --bs-btn-focus-shadow-rgb: #025043;
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #025043;
+    --bs-btn-active-border-color: rgba(255, 255, 255, 0.2);
+}
+#igLink > p, #igLink > i {
+    transition: 0.1s all linear;
+}
+#igLink:hover > p, #igLink:hover > i {
+    color: #F0FFF0;
+}
+#igLink > .fa-arrow-right {
+    transition: 0.1s all linear;
+}
+#igLink:hover > .fa-arrow-right {
+    transform: rotate(-90deg);
+}
+img {
+    --bs-border-width: 2px;
+    --bs-border-color: rgba(255, 255, 255, 0.2);
+}
+form > div > div {
+    flex-basis: 25%;
+}
+form > div > div > a > i:hover {
+    -webkit-animation: fa-beat 0.5s infinite linear;
+    -moz-animation: fa-beat 0.5s infinite linear;
+    -o-animation: fa-beat 0.5s infinite linear;
+    animation: fa-beat 0.5s infinite linear;
+    animation-iteration-count: 1;
+}

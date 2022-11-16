@@ -84,3 +84,6 @@ form > div > div > a > i:hover {
     animation: fa-beat 0.5s infinite linear;
     animation-iteration-count: 1;
 }
+.vanta-canvas {
+    padding: 0px!important;
+}

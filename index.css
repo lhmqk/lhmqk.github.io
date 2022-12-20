@@ -91,5 +91,6 @@ form > div > div > a > i:hover {
 .vanta-canvas {
   padding: 0px !important;
 }
-button#widgetIcon {
+#friday {
+  height: 50% !important;
 }

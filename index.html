@@ -19,6 +19,11 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.2.min.js"
+      integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+      crossorigin="anonymous"
+    ></script>
     <style>
       df-messenger {
         --df-messenger-bot-message: #025043;
@@ -198,6 +203,23 @@
       agent-id="30eb1324-c661-445b-89f1-9aa49811762d"
       language-code="vi"
     ></df-messenger>
+    <script>
+      $(document).ready(function () {
+        // YOUR CODE (NOT RELATED TO DIALOGFLOW MESSENGER)
+
+        window.addEventListener("dfMessengerLoaded", function (event) {
+          $r1 = document.querySelector("df-messenger");
+          $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+          $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+
+          var sheet = new CSSStyleSheet();
+          sheet.replaceSync(
+            `div.chat-wrapper[opened="true"] { height: 60%; width: 80% }`
+          );
+          $r2.shadowRoot.adoptedStyleSheets = [sheet];
+        });
+      });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
